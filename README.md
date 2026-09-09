@@ -1,8 +1,7 @@
 # Endless Racing Demo
 
 Unity 6 的极简竞速 demo：柏林噪声程序化生成无限赛道，支持漂移甩尾、
-轮胎痕迹、过门加分、撞车结算与最高分记录。玩法逻辑全部是纯 C#，不依赖
-任何脚本热更框架。
+轮胎痕迹、过门加分、撞车结算与最高分记录
 
 ## 运行
 
@@ -41,5 +40,5 @@ Assets/
   做无缝过渡，地块移出视野后销毁并向前补新块，形成无限赛道；
 - 纯 C# 玩法层：各场景组件直接实现游戏规则，组件之间通过公开方法互相
   汇报事件（比如 Gate 加分走 `Gate → GameManager.UpdateScore`），
-  场景里只序列化参数，不藏逻辑；
-- 输入使用 InputSystem 生成的 ActionAsset，同时保留旧 Input 处理菜单按键。
+  场景里只序列化参数；
+- 输入使用 InputSystem 生成的 ActionAsset，保留旧 Input 处理菜单按键。
